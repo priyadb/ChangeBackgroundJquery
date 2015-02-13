@@ -1,0 +1,66 @@
+<html>
+<head>
+<style type="text/css">
+.caption {
+top:420px;
+background-color:black;
+text-align:center;
+font-size:28px;
+font-family:'Trebuchet MS',sans-serif;
+color:white;
+position:absolute;
+width:700px;
+height:70px;
+margin-bottom:0px;
+}
+.button {
+background-color: crimson;
+background-image: -webkit-linear-gradient(top, crimson, crimson);
+background-image: -moz-linear-gradient(top,crimson,crimson);
+display: inline-block;
+font-size: 24px;
+font-family: 'Meiryo UI';
+color: #fff !important;
+text-decoration: none !important;
+padding: 5px 20px;
+line-height: inherit;
+overflow: hidden;
+position: relative;
+border-radius: 2px;
+margin-top: 13px;
+margin-bottom: 10px;
+}
+	.button:hover {
+		opacity: 0.9;
+	}
+</style>
+<script src="jquery-1.8.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	 $(window).load(function() {           
+		var i =0; 
+		var images = ['http://dl.dropboxusercontent.com/u/96099766/ChangeBackgroundJQuery/image2.png','http://dl.dropboxusercontent.com/u/96099766/ChangeBackgroundJQuery/image3.png','http://dl.dropboxusercontent.com/u/96099766/ChangeBackgroundJQuery/image1.png'];
+		var image = $('#slideit');
+		image.css('background-image', 'url(http://dl.dropboxusercontent.com/u/96099766/ChangeBackgroundJQuery/image1.png)');
+		setInterval(function(){			
+			image.fadeOut(1000, function () {
+			image.css('background-image', 'url(' + images [i++] +')');
+			image.fadeIn(1000);
+			});
+			if(i == images.length)
+				i = 0;
+		}, 5000);            
+	});
+</script>
+</head>
+<body>
+<!--Testimonials Start-->
+	<div style="width:55%;margin-left:17%;margin-right:28%;">
+		<h2 style="font-family:'Trebuchet MS', Helvetica, sans-serif;color:crimson;text-align:center;width:700px;">Change Background Image of div using jQuery</h2>
+		<p style="font-family:'Trebuchet MS', Helvetica, sans-serif;text-align:center;width:700px;">Demo by <a href="https://www.google.com/+Programming-free" style="color:crimson">Priyadarshini</a></p>
+		<div id="slideit" style="width:700px;height:391px;">
+		
+		</div>
+		<span class="caption"><a href="javascript:parent.window.location.href='http://www.programming-free.com/2013/12/change-background-image-jquery.html'" class="button">Tutorial</a></span>
+	</div>
+</body>
+</html>
